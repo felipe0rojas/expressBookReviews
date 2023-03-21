@@ -29,7 +29,7 @@ public_users.get('/', function (req, res) {
   let bookPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        resolve(res.send(JSON.stringify(books)))
+        resolve(res.send(books))
       } catch (err) {
         reject(err)
       }
@@ -51,7 +51,7 @@ public_users.get('/isbn/:isbn', function (req, res) {
   let bookPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        resolve(res.send(JSON.stringify(books[isbn])))
+        resolve(res.send(books[isbn]))
       } catch (err) {
         reject(err)
       }
@@ -74,7 +74,7 @@ public_users.get('/author/:author', function (req, res) {
   let bookPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        resolve(res.send(JSON.stringify(filtered_books)))
+        resolve(res.send(filtered_books))
       } catch (err) {
         reject(err)
       }
@@ -97,7 +97,7 @@ public_users.get('/title/:title', function (req, res) {
   let bookPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        resolve(res.send(JSON.stringify(filtered_titles)))
+        resolve(res.send(filtered_titles))
       } catch (err) {
         reject(err)
       }
@@ -119,7 +119,7 @@ public_users.get('/review/:isbn',function (req, res) {
   let bookPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        resolve(res.send(JSON.stringify(filtered_reviews[0][1].reviews)))
+        resolve(res.send(filtered_reviews[0][1].reviews))
       } catch (err) {
         reject(err)
       }
